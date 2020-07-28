@@ -16,7 +16,7 @@ _After this lesson, students will be able to:_
 
 
 ### What is Rails?
-[Rails is a server-side web application framework written in Ruby](https://en.wikipedia.org/wiki/Ruby_on_Rails).
+[Rails is a server-side web application framework written in Ruby](https://en.wikipedia.org/wiki/Ruby_on_Rails) and is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages.
 
 
 #### It features:
