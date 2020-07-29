@@ -49,7 +49,7 @@ Node, by comparison is a blank slate where all things are possible. The tradeoff
 - DRY (Don't Repeat Yourself)
 - Convention over configuration
 
-We've seen a lot of similar things in our previous units. That's because Rails emergence and popularity influenced web development as a whole, and many new frameworks continue to use many of the successful patterns and features that Rails developed.
+We've seen a lot of similar things in our previous units. That's because the popularity of Rails  influenced web development as a whole, and many new frameworks continue to use many of the successful patterns and features that Rails developed.
 
 Something we haven't seen yet, is a new philosophy called `Convention over Configuration`
 
@@ -76,6 +76,134 @@ ORM is Object Relational Mapping, which is to map an object with a relational wo
 ODM on the other hand is an Object Document Mapper, which maps objects with a Document Database like Mongo. The main difference is that ORM is for MySQL databases, while ODM does the mapping for document representation of data.
 
 </details>
+
+## Spinning Up Our First Rails App
+
+### Rails Full Front/Back End Server
+
+To start a new rails app, you **do not** have to make a directory. Navigate to `student_examples`.
+
+The command to build our rails server is the following:
+
+```
+rails new first_test_run
+```
+
+<br>
+
+Terminal feedback will look something like this:
+
+<img src="https://i.imgur.com/vliTe0q.png" width=400 /> 
+
+<br>
+<hr>
+
+This will create our app with an entire folder/file structure built on the MVC pattern and then some. 
+
+```
+cd intro_app_api
+code .
+```
+
+Look inside the `app` folder for our MVC pattern.
+
+<img src="https://i.imgur.com/bmsl4Xk.png" width=100 />
+
+
+
+To start the server run: `rails s`
+
+Now in a browser type: `localhost:3000` and you should see the following:
+
+<img src="https://i.imgur.com/TkhQqxF.png" width=600 />
+
+And in your terminal you should see:
+
+```ruby
+rails s
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:3000
+* Listening on tcp://[::1]:3000
+Use Ctrl-C to stop
+Started GET "/" for ::1 at 2020-07-29 15:00:11 -0400
+   (2.5ms)  SELECT sqlite_version(*)
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/joekeohan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/joekeohan/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 488)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4527)
+```
+
+
+#### First Gotcha - Git
+
+The first thing we just learned about Rails is that it's super easy to spin up a new web server.  That ease of use requires that we understand a few things about the server.  Like the fact that `rails s` just create a brand new git repo.  Now that wouldn't be much of an issue but we are now a repo inside of a repo and thats just `no bueno`
+
+So exactly how would you resolve this?
+
+<details>
+<summary>Answer</summary>
+<br>
+
+```sh
+rm -rf .git
+```
+</details>
+
+#### Second Gotcha - Database
+
+**Q:** From the terminal output can you determine what sql software Rails uses by default?
+
+<details>
+<summary>Answer</summary>
+<br>
+
+```ruby
+(2.5ms)  SELECT sqlite_version(*)
+```
+</details>
+<br>
+
+Now since you spent so much time last week working with Postgres it only makes sense we should use that as our database.  This requires that we add an additional configuration option when using `rails s`.
+
+The one thing about using Rails you should learn right now is that, at times, it's just easier to delete and spin up a new server vs trying to make configuration changes once it's been built.  This isn't necessarily one of those times but let's do so regardless. 
+
+First delete our existing server altogether.
+
+```sh
+rm -rf first_test_run
+```
+
+And now run: 
+
+```sh
+rails new second_test_run --skip-git -d postgresql
+```
+
+And of course change into the directory and start the server.
+
+```
+rails s
+```
+
+Now in a browser type: `localhost:3000` and you should see the following:
+
+<img src="https://i.imgur.com/JQlFcK4.png" width=400 />
+
+<br>
+<br>
+
+Looks like we have another gotcha. In reality this message is just reminding us that we still have some work to do in order to use Postgresql. 
+
+
+You wouldn't know this as of yet but we did forget to run one final flag:  `--api`.  With that in mind lets delete the server and rebuild a new one that we can use for the remainder of the lecture.
+
+
 ## How we will be using Rails
 
 ### Rails 5 API
@@ -95,9 +223,7 @@ This flag slims Rails down considerably, removing files, folders, and middleware
 <br>
 <hr>
 
-#  &#x2600; BUILD A NEW RAILS APP
-
-To start a new rails app, you **do not** have to make a directory. Navigate to `student_examples`.
+#  &#x2600; BUILD A NEW RAILS API APP
 
 
 We are going to build an app called
@@ -110,7 +236,7 @@ The command to build our rails json api with postgres is the following:
 rails new intro_app_api --api -d postgresql --skip-git
 ```
 
-In English:
+To recap all those commands:
 
 Hey `rails` make a `new` project called `intro_app_api` as just an `--api` (as opposed to full rails, we'll be rendering our views with React later) set the database `-d` to `postgresql` and do not initialize this project with `git` (since we're doing this in our class repo, which is already a git repository, we don't want to cause git-ception), so let's `--skip-git` this time
 
@@ -136,14 +262,7 @@ code .
 
 💥💥 Made a mistake typing `rails new`? Just remove the folder that was created and re-run the command. It is far faster to do that than go into the config files and update stuff💥💥
 
-<br>
 
-Terminal feedback will look something like this:
-
-![](https://i.imgur.com/vliTe0q.png) Etc...
-
-<br>
-<hr>
 
 
 ## Files and Folders
@@ -222,7 +341,7 @@ In Mongo our table was a collection. Its 'columns' were the keys we used in our 
 
 In SQL this is a **table** that has **columns**.
 
-We are going to make yet another ToDos thingy with very simple data.
+We are going to make a ToDos thingy with very simple data.
 
 
 &#x1F535; Open the `db` folder. We are going to make some changes to it. For the most part we will not interact with it directly, but rather will do so by generating and running **migrations**.
