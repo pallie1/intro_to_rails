@@ -433,7 +433,7 @@ Running the migration screated a `schema.rb` file. This is the schema for all yo
 
 #### DO NOT TOUCH THE SCHEMA.RB
 
-*Not to be touched*. *DO NOT MODIFY IT*
+*Not to be touched*. *DO NOT MODIFY IT*...NEVER..EVER...NEVER...EVER...
 
 Same goes for your migrations. Once you've run a migration *DO NOT TOUCH IT*
 
@@ -569,11 +569,25 @@ rails c
 
 ![](https://i.imgur.com/4uRBFpl.png)
 
-* We can see that our Todos model exists and that we can perform ActiveRecord queries on it, and we can see the SQL statement used to query the database:
+With our Todos model in place we can use ActiveRecord to perform our queries.
 
+**Q:** Who enjoyed writing all those long postresql queries to find a thing?  
+
+<details>
+<summary>Answer</summary>
+<br>
+No one
+<br>
+</details>
+
+<br>
+
+Now lets use ActiveRecord to make those queries.
 ```ruby
 Todo.all
 ```
+
+We can see the SQL statement used to query the database:
 
 ![](https://i.imgur.com/s6MbslU.png)
 
@@ -585,7 +599,6 @@ Todo.count
 
 ![](https://i.imgur.com/Lp6mWi5.png)
 
-Zero todos.
 
 ### Create and Save new Todos
 
