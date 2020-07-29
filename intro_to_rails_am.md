@@ -28,8 +28,6 @@ _After this lesson, students will be able to:_
 - Built-in ORM (Object Relational Mapping  programming technique for converting
    data between incompatible type systems using OOP.
    - Example: converting data that is in rows/columns/tables into JSON), called Active Record, based on [Active Record Pattern](https://en.wikipedia.org/wiki/Active_record_pattern) **
-- Encourages Agile web development
-- Strong focus on testing, and utilizing testing for documentation
 
 
 Rails is a server environment just like Node. The big difference is that Rails favors **convention** over **configuration**.
