@@ -428,7 +428,7 @@ Do the afternoon lab in groups
 <hr>
 
 
-###Extra detail on the --api flag
+### Extra detail on the --api flag
 
  http://edgeguides.rubyonrails.org/api_app.html
 
