@@ -22,12 +22,11 @@ _After this lesson, students will be able to:_
 - Seed data
 - Query relational data in rails console
 
-<br>
 <hr>
 
 ### SETUP
 
-* Use the `intro_app_api` project from this morning's lesson (the **Todo** app)
+* We will be using the `intro_app_api` project
 
 <br>
 <hr>
@@ -59,8 +58,6 @@ User.find(22).todos.all
 ```
 
 ... and get the same result
-
-3:05
 
 ### What we will do
 
@@ -117,7 +114,7 @@ Yay, we have two tables! Now we just need to relate them.
 
 <br>
 <hr>
-3:13
+
 
 ## &#x1F449; Run a migration to add a foreign key column to the todos tables
 
@@ -166,10 +163,27 @@ end
 
 ![](https://i.imgur.com/2sGB2S7.png)
 
+**Side Note:** Rolling Back A Migration
+
+There may come a time when changes to the schema need to be undone or rolled back in this case.  In order to roll back the last migration run:
+
+```sh
+rails db:rollback
+```
+
+Doing so will remove the `user_id` column from the schema.
+
+<img src="https://i.imgur.com/PJGAYqA.png" width=500>
+
+Since we know that we need the user_id lets add it back by running a migration.
+
+```sh
+rails db:migrate
+```
+
 <br>
 <hr>
 
-3:18
 
 # Models
 

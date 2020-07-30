@@ -304,9 +304,8 @@ This is all we will do. There are very specific processes for doing these things
 # &#x26A0; STEP ONE
 #### &#x1F449;  MAKING A DATABASE WITH A TABLE AND COLUMNS
 
-<br>
 <hr>
-11:30
+
 
 # &#x1F449; CREATE DATABASE
 
@@ -330,7 +329,7 @@ intro_app_api_development=#
 
 Close it again with `\q`.
 
-11:33
+
 # &#x1F449; MAKE COLUMNS FOR THE DATABASE
 
 ### MIGRATIONS
@@ -376,7 +375,6 @@ The numbers are just a timestamp. All migration files are kept here in sequence 
 
 [Why do we use migrations?](http://guides.rubyonrails.org/v3.2.8/migrations.html)
 
-11:38
 
 ### GIVE THE MIGRATION SOME DATA
 
@@ -410,7 +408,6 @@ The column names are `symbols`
 
 ![](https://i.imgur.com/CJQr6At.png)
 
-11:42
 # &#x1F449;  Run the migration
 
 We have created the migration, and we have told it what we want it to do. All that's left is to execute it.
@@ -439,7 +436,6 @@ Running the migration created a `schema.rb` file. This is the schema for all you
 
 Same goes for your migrations. Once you've run a migration *DO NOT TOUCH IT*
 
-11:44
 ### Check the database itself:
 
 ```
@@ -555,7 +551,6 @@ Now test yourself and see if you know what the plurals are for the following:
 - octopus
 - foci
 
-12:15
 
 # &#x1F449; ACTIVE RECORD
 
@@ -574,7 +569,6 @@ It's like Mongoose. With Mongoose, we did not have to write raw Mongo queries, a
 
 We can open up a console and just write ActiveRecord queries directly (we couldn't do this with Mongoose).
 
-12:22
 
 ## Rails console
 
@@ -642,7 +636,40 @@ Todo.create(title: "Something", completed: false)
 
 ![](https://i.imgur.com/lZOqs5V.png)
 
+Now display both todos.
 
+```ruby
+Todo.all
+```
+
+<img src="https://i.imgur.com/UZZUPr3.png" width=900 height=50 />
+
+<br>
+<br>
+
+**Side Note**
+
+The default format output isn't the easiest to read.  There are several gems that provide better formatting, one of which is [Hirb](https://github.com/cldwalker/hirb).
+
+Let's install and get this formatting working:
+
+- Add gem 'hirb' to our Gemfile
+- Run `bundle install` to install the gem
+- Now run `rails c`
+- In the console type: `require 'hirb'`
+- In the console type: `Hirb.enable`
+
+Now run `Todo.all` and the output should look similar to the following:
+
+```ruby
+irb(main):006:0> Todo.all
+  Todo Load (0.7ms)  SELECT "todos".* FROM "todos"
++----+-----------------------------------+-----------+
++----+-----------------------------------+-----------+
+| 1  | First todo                        | true      |
+| 2  | Something                         | false     |
++----+-----------------------------------+-----------+
+```
 ### Query Todos
 
 - `.find` (finds by id)
@@ -660,6 +687,7 @@ Todo.where(title: "Something", completed: false)
 ```
 
 ![](https://i.imgur.com/QkiKLyK.png)
+
 
 
 ### Update Todos
@@ -739,11 +767,6 @@ The `--api` flag from the docs:
 
 Read more about using Rails as an API [here](http://edgeguides.rubyonrails.org/api_app.html)
 
+### References
 
-<hr>
-Title: Rails New<br>
-Type: Lesson<br>
-Creator: Thom Page<br>
-Duration: 1.5 hr<br>
-Topics: Migrations and ActiveRecord<br>
-<hr>
+- [rails-c-5-ways-to-get-pretty-output](https://aneta-bielska.github.io/blog/rails-c-5-ways-to-get-pretty-output.html)
