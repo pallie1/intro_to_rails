@@ -322,7 +322,11 @@ We can check that the database was created by typing
 rails dbconsole
 ```
 
-This will open up our postgres CLI.
+This will open up our postgres CLI and immediately connect us to our database.
+
+```sh
+intro_app_api_development=# 
+```
 
 Close it again with `\q`.
 
@@ -420,14 +424,14 @@ Run the migration with `rails db:migrate`.
 == 20150710152405 CreateTodosTable: migrated (0.0000s) ======================
 ```
 
-![](https://i.imgur.com/wz2VK6D.png)
 
-11:43
+<img src="https://i.imgur.com/wz2VK6D.png" width=500 />
+
 ### schema.rb
 
-Running the migration screated a `schema.rb` file. This is the schema for all your data.
+Running the migration created a `schema.rb` file. This is the schema for all your data.
 
-![](https://i.imgur.com/PTqoX86.png)
+<img src="https://i.imgur.com/PTqoX86.png" width=400 />
 
 #### DO NOT TOUCH THE SCHEMA.RB
 
@@ -450,7 +454,11 @@ See the columns created for the todos table:
 SELECT * FROM todos;
 ```
 
-![](https://i.imgur.com/pn9378E.png)
+
+<img src="https://i.imgur.com/pn9378E.png" width=400 />
+
+<br>
+<br>
 
 Quit with `\q`.
 
@@ -458,11 +466,9 @@ Now that our database has been constructed with tables and columns for the table
 
 ### &#x2714; Step 1 complete: making a database with a table and columns
 
-11:45
-<br>
 <hr>
 
-# &#x2600; BLOG APP
+# &#x2600; BLOG APP ACTIVITY
 
 &#x1F535; **Activity (20 mins)**
 
@@ -494,17 +500,10 @@ Correct result:
 <br>
 <hr>
 
-12:05 - 5 min break , back at 12:10
-
-<br>
-<hr>
-
-12:10
 
 # &#x26A0; STEP TWO
 #### &#x1F449; MAKING A MODEL AND INTERACTING WITH IT
 
-<br>
 <hr>
 
 # &#x1F449; CREATE MODEL
@@ -529,6 +528,32 @@ end
 ![](https://i.imgur.com/BbOk24s.png)
 
 All this does for now is wire up our app so that we use Active Record on our Todo model to interface with our database.
+
+**Side Note**
+
+Rails wants to make sure that we use the correct singular and plural of things that it even provides 2 methods to help us to do just that.
+
+Go into the rails console by typing:
+
+```sh
+rails console
+```
+
+Type in the following and see what is returned:
+
+```ruby
+"frienemies".singularize
+=> "frienemy"
+
+"frienemy".pluralize
+=> "frienemies"
+```
+
+Now test yourself and see if you know what the plurals are for the following:
+
+- phenom
+- octopus
+- foci
 
 12:15
 
@@ -617,7 +642,6 @@ Todo.create(title: "Something", completed: false)
 
 ![](https://i.imgur.com/lZOqs5V.png)
 
-12:26
 
 ### Query Todos
 
@@ -655,8 +679,6 @@ Or chain the commands together:
 Todo.find(1).update(completed: true)
 ```
 
-12:30
-
 ### Delete Todos
 
 - `.destroy` can either be called on an ActiveRecord object or takes the id of an ActiveRecord object
@@ -675,7 +697,6 @@ Todo.find(1).destroy
 
 We will be using these Active Record queries within Rails.
 
-12:31
 
 &#x1F535; **Activity (9 mins)**
 
@@ -690,21 +711,9 @@ Using rails console `rails c`:
 
 Type `exit` to leave Rails Console
 
-12:40
-
 ### &#x2714; Step Two complete: making a model and interacting with it
 
-<br>
-<hr>
 
-## Aside
-Rails has conventions on how to pluralize and singularize words.
-
-If you would like to check the singular or plural of a word, you can do it by running `rails c` (to quit, type `quit`
-
-![rails c pluralize, singularize ](https://i.imgur.com/RiV71w5.png)
-
-<br>
 <hr>
 
 # REVIEW
