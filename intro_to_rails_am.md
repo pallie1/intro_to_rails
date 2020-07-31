@@ -93,9 +93,10 @@ Something we haven't seen yet, is a new philosophy called `Convention over Confi
 |run the server |nodemon| rails s| You'll see something called puma running in terminal|
 
 <details><summary> More about ORM/ODM </summary>
-ORM is Object Relational Mapping, which is to map an object with a relational world. It basically converts data between incompatible types in object oriented programming languages. What ORM does is wrap the implementation specific details of storage drivers in an API, and maps the relational fields/attributes to an object members. For eg if I have a table Address, it is mapped to a single object Address, with various methods associated with it.
-
-ODM on the other hand is an Object Document Mapper, which maps objects with a Document Database like Mongo. The main difference is that ORM is for MySQL databases, while ODM does the mapping for document representation of data.
+   <br>
+**ORM is Object Relational Mapping**, which is to map an object with a relational world. It basically converts data between incompatible types in object oriented programming languages. What ORM does is wrap the implementation specific details of storage drivers in an API, and maps the relational fields/attributes to an object members. For eg if I have a table Address, it is mapped to a single object Address, with various methods associated with it.
+<br>
+**ODM is an Object Document Mapper**, which maps objects with a Document Database like Mongo. The main difference is that ORM is for MySQL databases, while ODM does the mapping for document representation of data.
 
 </details>
 
