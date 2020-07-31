@@ -242,11 +242,9 @@ This flag slims Rails down considerably, removing files, folders, and middleware
 #  &#x2600; BUILD A NEW RAILS API APP
 
 
-We are going to build an app called
+Ok so let's build the app that we will use for the remainder of the lecture which will be called: `intro_app_api`
 
-### `intro_app_api`
-
-The command to build our rails json api with postgres is the following:
+The command to build our rails json `api` with `postgres` is:
 
 ```
 rails new intro_app_api --api -d postgresql --skip-git
