@@ -16,6 +16,8 @@ _After this lesson, students will be able to:_
 
 ### Backend Frameworks
 
+<img src="https://i.imgur.com/uX5Sc9k.png" width=500/>
+
 When we browse the most popular web sites today it's hard for the average person to consider what backend framework is being used to deliver their favorite content.  But for a full stack developer it's something they most likely will contemplate for each and every site. Take for instance the following web sites. What backend frameworks are they using?
 
 - [PayPal](https://www.paypal.com/)
@@ -23,6 +25,11 @@ When we browse the most popular web sites today it's hard for the average person
 - [AirBnB](https://www.airbnb.com/)
 
 We can use a free online tool called [builtwith](https://builtwith.com/) to examine the site and provide some exposure to what technologies are being implemented on the site. 
+
+Here are a few articles on the best or most popular web frameworks:
+
+- [top-10-web-development-frameworks-in-2020](https://hackr.io/blog/top-10-web-development-frameworks-in-2020)
+-
 
 **Activity:** Examine one or two of the web sites that you use everyday/week and see if you can determine what backend and perhaps frontend frames they are using.  Post your discoveries in the classroom channel. 
 
