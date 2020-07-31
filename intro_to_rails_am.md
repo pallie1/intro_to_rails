@@ -23,13 +23,13 @@ When we browse the most popular web sites today it's hard for the average person
 As with everything new frameworks get introduced into the market and older frameworks move out of favor.  Check out the following visual on [Most Popular Backend Frameworks | 2012-2019](https://www.youtube.com/watch?v=8FQ4zW_F_Iw)
 
 
-Take for instance the following web sites. What backend frameworks are they using?
+Now that you've exposed to the plethora of frameworks available, let's take a look at the following web site. From just examining thier homepage can you determine what backend frameworks are they using?
 
 - [PayPal](https://www.paypal.com/)
 - [Netflix](https://www.netflix.com/)
 - [AirBnB](https://www.airbnb.com/)
 
-We can use a free online tool called [builtwith](https://builtwith.com/) to examine the site and provide some exposure to what technologies are being implemented on the site. 
+The answer to that is most certainly no however we can use a free online tool called [builtwith](https://builtwith.com/) to examine the site and provide some exposure to what technologies are being implemented on the site, both back and front end. 
 
 Here are a few resources that discuss the best or most popular web frameworks:
 
