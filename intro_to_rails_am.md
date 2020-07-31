@@ -75,7 +75,7 @@ We've seen a lot of similar things in our previous units. That's because the pop
 
 Something we haven't seen yet, is a new philosophy called `Convention over Configuration`
 
-- Express is a minimalist framework, where you add in each piece of functionality that you need. Therefore you must also configure everything. There are some recommended patterns, but you can really build the app any way you want.
+- Express is a minimalist framework, where you add in each piece of functionality that you need. Therefore you must also configure everything. There are some recommended patterns, but you can really build the app any way you want.  If possible show some previous express builds using different file/folder structures. 
 
 - Rails provides you with tons of functionality. However, in order to utilize this right-out-of-the-box functionality you must follow all of the Rails conventions.
   - This means proper pluralization and capitalization will make or break your app (literally)
