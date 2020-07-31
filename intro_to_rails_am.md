@@ -89,7 +89,7 @@ Something we haven't seen yet, is a new philosophy called `Convention over Confi
 |Database| MongoDB| Postgres |MongoDB is considered NoSQL, while Postgres is SQL|
 |ODM/ORM| Mongoose| Active Record |Active Record will convert our SQL into JSON|
 |Third Party Code|NPM| Gem/ bundler/ bundler install|Gems are installed globally by default, npm packages, by default, are local|
-|server-side rendering|EJS or Handlebars| ~~[erb](https://www.stuartellis.name/articles/erb/)~~|We'll be skipping right into rendering our views with React|
+|client-side rendering| React| React | React is by far the most fun, and popular, front end framework|
 |run the server |nodemon| rails s| You'll see something called puma running in terminal|
 
 
