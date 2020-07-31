@@ -20,6 +20,9 @@ When we browse the most popular web sites today it's hard for the average person
 
 <img src="https://i.imgur.com/uX5Sc9k.png" width=500/>
 
+As with everything new frameworks get introduced into the market and older frameworks move out of favor.  Check out the following visual on [Most Popular Backend Frameworks | 2012-2019](https://www.youtube.com/watch?v=8FQ4zW_F_Iw)
+
+
 Take for instance the following web sites. What backend frameworks are they using?
 
 - [PayPal](https://www.paypal.com/)
@@ -31,7 +34,7 @@ We can use a free online tool called [builtwith](https://builtwith.com/) to exam
 Here are a few resources that discuss the best or most popular web frameworks:
 
 - [top-10-web-development-frameworks-in-2020](https://hackr.io/blog/top-10-web-development-frameworks-in-2020)
-- [Most Popular Backend Frameworks | 2012-2019](https://www.youtube.com/watch?v=8FQ4zW_F_Iw)
+- [top-7-backend-web-development-frameworks-2019](https://www.kelltontech.com/kellton-tech-blog/top-7-backend-web-development-frameworks-2019)
 
 **Activity:** Examine one or two of the web sites that you use everyday/week and see if you can determine what backend and perhaps frontend frames they are using.  Post your discoveries in the classroom channel. 
 
