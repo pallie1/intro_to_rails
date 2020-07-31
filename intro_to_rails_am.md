@@ -14,6 +14,18 @@ _After this lesson, students will be able to:_
 <br>
 <hr>
 
+### Backend Frameworks
+
+When we browse the most popular web sites today it's hard for the average person to consider what backend framework is being used to deliver their favorite content.  But for a full stack developer it's something they most likely will contemplate for each and every site. Take for instance the following web sites. What backend frameworks are they using?
+
+- [PayPal](https://www.paypal.com/)
+- [Netflix](https://www.netflix.com/)
+- [AirBnB](https://www.airbnb.com/)
+
+We can use a free online tool called [builtwith](https://builtwith.com/) to examine the site and provide some exposure to what technologies are being implemented on the site. 
+
+**Activity:** Examine one or two of the web sites that you use everyday/week and see if you can determine what backend and perhaps frontend frames they are using.  Post your discoveries in the classroom channel. 
+
 
 ### What is Rails?
 [Rails is a server-side web application framework written in Ruby](https://en.wikipedia.org/wiki/Ruby_on_Rails) and is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages.
