@@ -5,7 +5,8 @@
 ### Lesson Objectives
 _After this lesson, students will be able to:_
 
-- Initialize a Rails project using the `--api` flag
+- Query a site and determine its supporting technologies
+- Initialize a Rails project using several helper flags
 - Use a postgresql db with Rails
 - Run a migration to create a table
 - Run migrations to create and rename columns
