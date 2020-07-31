@@ -16,9 +16,10 @@ _After this lesson, students will be able to:_
 
 ### Backend Frameworks
 
+When we browse the most popular web sites today it's hard for the average person to consider what backend framework is being used to deliver their favorite content.  But for a full stack developer it's something they most likely will contemplate for each and every site. Take for instance the following web sites. What backend frameworks are they using?
+
 <img src="https://i.imgur.com/uX5Sc9k.png" width=500/>
 
-When we browse the most popular web sites today it's hard for the average person to consider what backend framework is being used to deliver their favorite content.  But for a full stack developer it's something they most likely will contemplate for each and every site. Take for instance the following web sites. What backend frameworks are they using?
 
 - [PayPal](https://www.paypal.com/)
 - [Netflix](https://www.netflix.com/)
